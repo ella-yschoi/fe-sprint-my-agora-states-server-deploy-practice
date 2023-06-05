@@ -1,8 +1,8 @@
 name: client
 on:
-    push:
-        branches:
-            - reference
+  push:
+    branches:
+      - reference
 jobs:
   build:
     runs-on: ubuntu-20.04
@@ -28,4 +28,4 @@ jobs:
             --region ap-northeast-2 \
             build s3://fe-117-ella-yschoi-s3 \
             --delete
-        working-directory: ./my-agora-states-client
+        working-directory: ./my-agora-states-client/build
