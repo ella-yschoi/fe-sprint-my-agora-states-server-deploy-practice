@@ -12,11 +12,11 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: ./my-agora-states-client
+        working-directory: ./my-agora-states-client-react
         
       - name: Build
-        run: /bin/bash -c "npm run build"
-        working-directory: ./my-agora-states-client
+        run: npm run build
+        working-directory: ./my-agora-states-client-react
         
       - name: SHOW AWS CLI VERSION
         run: aws --version
@@ -31,4 +31,4 @@ jobs:
             --region ap-northeast-2 \
             build s3://fe-117-ella-yschoi-s3 \
             --delete
-        working-directory: ./my-agora-states-client/build
+        working-directory: ./my-agora-states-client-react
